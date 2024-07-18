@@ -8,9 +8,18 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 export default defineConfig({
   base: '/table-database/',
   plugins: [vue(), vueJsx()],
+  root: './client',
+  build: {
+    outDir: 'dist',
+  },
+  rollupOptions: {
+    input: {
+      main: './client/src/main.js',
+    },
+  },
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '@': fileURLToPath(new URL('.', import.meta.url)),
     },
   },
 })

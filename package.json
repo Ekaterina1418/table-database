@@ -13,7 +13,8 @@
     "build:server": "npm run build --prefix api",
     "deploy:server": "npm run deploy --prefix api",
     "lint:server": "npm run lint --prefix api",
-    "build": "npm run build:client"
+    "build": "npm run build:client && npm run build:server",
+    "start": "npm run dev:client && npm run dev:server"
   },
   "dependencies": {
     "@vitejs/plugin-vue": "^5.0.5",

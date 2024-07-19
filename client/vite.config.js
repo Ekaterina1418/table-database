@@ -6,7 +6,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 export default defineConfig({
   base: '/table-database/',
   plugins: [vue(), vueJsx()],
-  root: 'client',
+
   build: {
     outDir: '../dist',
     rollupOptions: {

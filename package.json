@@ -1,10 +1,9 @@
 {
-  "name": "table",
+  "name": "table-database",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "dev:client": "npm run dev --prefix client",
-    "start:client": "npm run start --prefix client",
     "build:client": "npm run build --prefix client",
     "deploy:client": "npm run deploy --prefix client",
     "preview:client": "npm run preview --prefix client",
@@ -14,21 +13,21 @@
     "build:server": "npm run build --prefix api",
     "deploy:server": "npm run deploy --prefix api",
     "lint:server": "npm run lint --prefix api",
-     "build": "vite build"
+    "build": "npm run build:client"
   },
   "dependencies": {
+    "@vitejs/plugin-vue": "^5.0.5",
+    "@vitejs/plugin-vue-jsx": "^3.0.1",
+    "pinia": "^2.1.7",
+    "vue": "^3.3.4",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "express-validator": "^7.0.1",
     "mongodb": "^5.7.0",
     "mongoose": "^7.4.2",
-    "nodemon": "^3.0.1",
-    "pinia": "^2.1.6",
-    "vue": "^3.3.4"
+    "nodemon": "^3.0.1"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^5.0.5",
-    "@vitejs/plugin-vue-jsx": "^3.0.1",
     "eslint": "^8.45.0",
     "eslint-plugin-vue": "^9.15.1",
     "gh-pages": "^5.0.0",

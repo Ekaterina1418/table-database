@@ -6,17 +6,16 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 export default defineConfig({
   base: '/table-database/',
   plugins: [vue(), vueJsx()],
-
+  root: '../client',
   build: {
-    outDir: '../dist',
+    outDir: 'dist',
     rollupOptions: {
       input: 'index.html',
-      external: ['pinia'],
     },
   },
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '@': fileURLToPath(new URL('./src', import.meta.url)), // Альясы
     },
   },
 })

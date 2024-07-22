@@ -23,8 +23,6 @@ mongoose
   .connect(URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    serverSelectionTimeoutMS: 5000,
-    socketTimeoutMS: 45000,
   })
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.log(`DB connection error: ${err}`));

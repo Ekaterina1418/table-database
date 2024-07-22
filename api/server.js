@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const URL = process.env.VITE_PROD_BASE_URL;
+const URL = "mongodb+srv://eolejnik:Eg_180587@cluster0.3xw5xo3.mongodb.net/";
 const port = 3000;
 app.post("/users", UserController.add);
 app.get("/users", UserController.getAll);

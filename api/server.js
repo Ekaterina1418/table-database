@@ -25,7 +25,6 @@ const URL =
   "mongodb+srv://eolejnik:Eg_180587@cluster0.3xw5xo3.mongodb.net/";
 const port = process.env.PORT || 3000;
 
-// Настройка маршрутов
 app.post("/users", UserController.add);
 app.get("/users", UserController.getAll);
 app.delete("/users/:id", UserController.remove);

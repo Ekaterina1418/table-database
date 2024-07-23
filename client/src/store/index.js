@@ -1,8 +1,6 @@
 import { defineStore } from "pinia";
-import dotenv from "dotenv";
 
-dotenv.config();
-const api = process.env.VITE_PROD_BASE_URL;
+const api = import.meta.env.VITE_PROD_BASE_URL;
 export const useUsersStore = defineStore("userStore", {
   state: () => ({
     users: [],

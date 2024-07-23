@@ -5,7 +5,13 @@ import * as UserController from "./controllers/UserController.js";
 import dotenv from "dotenv";
 dotenv.config();
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://table-database.vercel.app/",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
 app.use(express.json());
 
 const URL = "mongodb+srv://eolejnik:Eg_180587@cluster0.3xw5xo3.mongodb.net/";
